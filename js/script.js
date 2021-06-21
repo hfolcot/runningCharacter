@@ -1,9 +1,18 @@
-let scroll = new LocomotiveScroll({
+const scroller = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
-    direction: 'horizontal'
+    direction: 'horizontal',
+    tablet: {
+        smooth: true
+    },
+    smartphone: {
+        smooth: true
+    }
 });
 
+scroller.on('scroll', (e) => {
+    console.log(e);
+})
 const character = document.getElementById('char');
 const scrollContainer = document.querySelector('[data-scroll-container]');
 

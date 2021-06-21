@@ -24,6 +24,11 @@ html body .scroll-container .page {
   margin-left: -11px;
   position: relative;
 }
+@media (max-width: 767px) {
+  html body .scroll-container .page {
+    min-width: 768px;
+  }
+}
 html body .scroll-container .page h1 {
   position: absolute;
   right: 0;

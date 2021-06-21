@@ -17,20 +17,21 @@ let scrolling = false;
 const character = document.getElementById('char');
 
 scroller.on('scroll', (e) => {
-    if (e.delta.x > 0 && e.delta.x < e.limit.x) {
+    //console.log(e);
+    if (e.scroll.x > 0.5 && e.delta.x < e.limit.x) {
 
-        character.classList.add('run');
-        character.classList.remove('idle');
         window.clearTimeout(scrolling);
         if (e.direction === 'left') {
             character.classList.add('left');
         } else {
             character.classList.remove('left');
         }
+        character.classList.add('run');
+        character.classList.remove('idle');
 
         scrolling = window.setTimeout(() => {
             character.classList.add('idle');
             character.classList.remove('run');
-        }, 500)
+        }, 1)
     }
 })

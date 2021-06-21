@@ -2,40 +2,35 @@ const scroller = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
     direction: 'horizontal',
+    getDirection: true,
     tablet: {
+        direction: 'horizontal',
         smooth: true
     },
     smartphone: {
+        direction: 'horizontal',
         smooth: true
     }
 });
 
-scroller.on('scroll', (e) => {
-    console.log(e);
-})
-const character = document.getElementById('char');
-const scrollContainer = document.querySelector('[data-scroll-container]');
-
 let scrolling = false;
-let scrollDirection = 'd';
+const character = document.getElementById('char');
 
-document.addEventListener('wheel', function (e) {
-    character.classList.add('run');
-    character.classList.remove('idle');
-    window.clearTimeout(scrolling);
-    if (e.deltaY <= 0) {
-        scrollDirection = 'u';
-    } else {
-        scrollDirection = 'd';
-    }
-    if (scrollDirection === 'u') {
-        character.classList.add('left');
-    } else {
-        character.classList.remove('left');
-    }
+scroller.on('scroll', (e) => {
+    if (e.delta.x > 0 && e.delta.x < e.limit.x) {
 
-    scrolling = window.setTimeout(() => {
-        character.classList.add('idle');
-        character.classList.remove('run');
-    }, 500)
+        character.classList.add('run');
+        character.classList.remove('idle');
+        window.clearTimeout(scrolling);
+        if (e.direction === 'left') {
+            character.classList.add('left');
+        } else {
+            character.classList.remove('left');
+        }
+
+        scrolling = window.setTimeout(() => {
+            character.classList.add('idle');
+            character.classList.remove('run');
+        }, 500)
+    }
 })

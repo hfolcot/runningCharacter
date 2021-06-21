@@ -70,7 +70,7 @@ html body .scroll-container .page.page-two .ground {
 }
 html body .scroll-container .page.page-three {
   background: linear-gradient(90deg, #522fe0 0%, #020557 100%);
-  min-width: calc(100vw + 100px);
+  min-width: 106vw;
 }
 html body .scroll-container .page.page-three .stars {
   background: url('../img/stars.png');

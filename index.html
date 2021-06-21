@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/locomotive-scroll.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Animated character concept</title>
+</head>
+
+<body>
+    <div data-scroll-container class="scroll-container" data-scroll-call="test">
+        <div data-scroll-section class="page page-one">
+            <h1 data-scroll data-scroll-class="fadeOut" data-scroll-offset="25%">Scroll ➡</h1>
+            <div data-scroll data-scroll-speed="-5" data-scroll-direction="vertical" class="sun">
+                <img src="img/moon.png">
+            </div>
+            <div class="ground"></div>
+            <div data-scroll data-scroll-speed="2" class="tree">
+                <img src="img/trees/tree1.png">
+            </div>
+        </div>
+        <div data-scroll-section class="page page-two">
+            <h1 data-scroll data-scroll-speed="-3" data-scroll-offset="50%" data-scroll-class="fadeIn"
+                data-scroll-repeat>It's nearly night
+                time...</h1>
+            <div class="ground"></div>
+            <div data-scroll data-scroll-speed="2" class="tree">
+                <img src="img/trees/tree1.png">
+            </div>
+        </div>
+        <div data-scroll-section class="page page-three">
+            <div class="stars">
+
+            </div>
+            <div data-scroll data-scroll-speed="5" data-scroll-direction="vertical" class="moon">
+                <img src="img/moon.png">
+            </div>
+            <div class="ground"></div>
+            <div data-scroll data-scroll-speed="2" class="tree">
+                <img src="img/trees/tree1.png">
+            </div>
+        </div>
+    </div>
+    <div class="character idle" id="char"></div>
+    <script src="js/locomotive-scroll.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

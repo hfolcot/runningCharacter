@@ -129,13 +129,15 @@ html body .scroll-container .page .tree {
 html body .scroll-container .page .tree img {
   height: 100%;
 }
-html body #char {
+html body .characterContainer {
   position: fixed;
   top: 45%;
   left: 40%;
+  pointer-events: none;
+}
+html body #char {
   height: 185px;
   width: 250px;
-  pointer-events: none;
   z-index: 10;
   background-image: url('../img/char.png');
   background-size: 1750px;

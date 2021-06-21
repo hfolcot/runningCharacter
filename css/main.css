@@ -109,7 +109,7 @@ html body .scroll-container .page.page-three .ground {
 }
 @media (max-width: 767px) {
   html body .scroll-container .page.page-three .ground {
-    min-width: 815px;
+    min-width: 830px;
   }
 }
 html body .scroll-container .page.page-three .moon {
@@ -194,7 +194,7 @@ html body .msh-container.fadeOut {
   opacity: 0;
 }
 html body .msh-container .mobile-scroll-hint {
-  animation: scroll 1s infinite;
+  animation: scrollhint 1s infinite;
 }
 @keyframes idle {
   100% {
@@ -236,7 +236,31 @@ html body .msh-container .mobile-scroll-hint {
     background-position: -1750px -200px;
   }
 }
-@keyframes scroll {
+@keyframes scrollhint {
+  80% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@-moz-keyframes scrollhint {
+  80% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes scrollhint {
+  80% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@-o-keyframes scrollhint {
   80% {
     transform: translateY(-100%);
   }

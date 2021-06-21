@@ -32,6 +32,6 @@ scroller.on('scroll', (e) => {
         scrolling = window.setTimeout(() => {
             character.classList.add('idle');
             character.classList.remove('run');
-        }, 1)
+        }, 250)
     }
 })

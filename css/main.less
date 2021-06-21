@@ -2,13 +2,14 @@
 
 html {
     body {
-        height     : 100vh;
-        position   : relative;
-        overflow   : hidden;
-        padding    : 0;
-        margin     : 0;
-        font-family: 'Roboto Mono', monospace;
-        color      : white;
+        height          : 100vh;
+        position        : relative;
+        overflow        : hidden;
+        padding         : 0;
+        margin          : 0;
+        font-family     : 'Roboto Mono', monospace;
+        color           : white;
+        background-color: rgba(2, 5, 87, 1);
 
         .scroll-container {
             display       : flex;
@@ -39,6 +40,13 @@ html {
 
                 &.page-one {
                     background: linear-gradient(90deg, rgba(51, 216, 251, 1) 0%, rgba(51, 129, 251, 1) 100%);
+
+                    h1 {
+                        @media(max-width: 767px) {
+                            display: none;
+                        }
+
+                    }
 
                     .ground {
                         background: linear-gradient(90deg, rgba(26, 172, 53, 1) 0%, rgba(17, 120, 36, 1) 100%);
@@ -84,10 +92,10 @@ html {
 
                 &.page-three {
                     background: linear-gradient(90deg, rgba(82, 47, 224, 1) 0%, rgba(2, 5, 87, 1) 100%);
-                    min-width : 800px;
+                    min-width : 106vw;
 
                     @media(max-width: 767px) {
-                        min-width: 768px;
+                        min-width: 815px;
                     }
 
                     .stars {
@@ -103,6 +111,11 @@ html {
 
                     .ground {
                         background: linear-gradient(90deg, rgba(15, 96, 30, 1) 0%, rgba(10, 62, 20, 1) 100%);
+                        min-width : 110vw;
+
+                        @media(max-width: 767px) {
+                            min-width: 815px;
+                        }
                     }
 
                     .moon {
@@ -150,42 +163,59 @@ html {
             left          : 40%;
             pointer-events: none;
 
-        }
-
-        #char {
-            height             : 185px;
-            width              : 250px;
-            z-index            : 10;
-            background-image   : url('../img/char.png');
-            background-size    : 1750px;
-            background-position: -750px -925px;
-
-            &.left {
-                transform        : rotateY(180deg);
-                -moz-transform   : rotateY(180deg);
-                -webkit-transform: rotateY(180deg);
-                -o-transform     : rotateY(180deg);
-            }
-
-
-            &.idle {
+            #char {
+                height             : 185px;
+                width              : 250px;
+                z-index            : 10;
+                background-image   : url('../img/char.png');
                 background-size    : 1750px;
                 background-position: -750px -925px;
-                animation          : idle 750ms steps(4) infinite;
-                -moz-animation     : idle 750ms steps(4) infinite;
-                -webkit-animation  : idle 750ms steps(4) infinite;
-                -o-animation       : idle 750ms steps(4) infinite;
-            }
 
-            &.run {
-                background-size    : 1750px;
-                background-position: -250px -200px;
-                animation          : run 1000ms steps(6) infinite;
-                -moz-animation     : run 1000ms steps(6) infinite;
-                -webkit-animation  : run 1000ms steps(6) infinite;
-                -o-animation       : run 1000ms steps(6) infinite;
+                &.left {
+                    transform        : rotateY(180deg);
+                    -moz-transform   : rotateY(180deg);
+                    -webkit-transform: rotateY(180deg);
+                    -o-transform     : rotateY(180deg);
+                }
+
+
+                &.idle {
+                    background-size    : 1750px;
+                    background-position: -750px -925px;
+                    animation          : idle 750ms steps(4) infinite;
+                    -moz-animation     : idle 750ms steps(4) infinite;
+                    -webkit-animation  : idle 750ms steps(4) infinite;
+                    -o-animation       : idle 750ms steps(4) infinite;
+                }
+
+                &.run {
+                    background-size    : 1750px;
+                    background-position: -250px -200px;
+                    animation          : run 1000ms steps(6) infinite;
+                    -moz-animation     : run 1000ms steps(6) infinite;
+                    -webkit-animation  : run 1000ms steps(6) infinite;
+                    -o-animation       : run 1000ms steps(6) infinite;
+                }
             }
         }
+
+        .msh-container {
+            position  : absolute;
+            bottom    : 5%;
+            left      : 5%;
+            font-size : 3rem;
+            opacity   : 1;
+            transition: opacity 300ms ease;
+
+            &.fadeOut {
+                opacity: 0;
+            }
+
+            .mobile-scroll-hint {
+                animation: scroll 1s infinite;
+            }
+        }
+
     }
 }
 
@@ -235,5 +265,16 @@ html {
 @-o-keyframes run {
     100% {
         background-position: -1750px -200px;
+    }
+}
+
+@keyframes scroll {
+
+    80% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
     }
 }

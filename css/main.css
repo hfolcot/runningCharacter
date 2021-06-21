@@ -86,7 +86,7 @@ html body .scroll-container .page.page-two .ground {
 }
 html body .scroll-container .page.page-three {
   background: linear-gradient(90deg, #522fe0 0%, #020557 100%);
-  min-width: 106vw;
+  min-width: 110vw;
 }
 @media (max-width: 767px) {
   html body .scroll-container .page.page-three {
@@ -179,7 +179,7 @@ html body .characterContainer #char.run {
 }
 html body .msh-container {
   position: absolute;
-  bottom: 5%;
+  bottom: 15%;
   left: 5%;
   font-size: 3rem;
   opacity: 1;

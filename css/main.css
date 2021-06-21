@@ -190,11 +190,6 @@ html body .msh-container {
     display: none;
   }
 }
-@media (max-width: 991px) {
-  html body .msh-container {
-    display: none;
-  }
-}
 html body .msh-container.fadeOut {
   opacity: 0;
 }

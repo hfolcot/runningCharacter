@@ -207,6 +207,10 @@ html {
             opacity   : 1;
             transition: opacity 300ms ease;
 
+            @media(hover: hover) {
+                display: none;
+            }
+
             &.fadeOut {
                 opacity: 0;
             }

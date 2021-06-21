@@ -185,6 +185,11 @@ html body .msh-container {
   opacity: 1;
   transition: opacity 300ms ease;
 }
+@media (hover: hover) {
+  html body .msh-container {
+    display: none;
+  }
+}
 html body .msh-container.fadeOut {
   opacity: 0;
 }

@@ -49,8 +49,13 @@ html body .scroll-container .page.page-one .ground {
 html body .scroll-container .page.page-one .sun {
   position: absolute;
   left: 15%;
-  top: 20%;
+  top: -20%;
   width: 15%;
+}
+@media (max-width: 767px) {
+  html body .scroll-container .page.page-one .sun {
+    top: 20%;
+  }
 }
 html body .scroll-container .page.page-one .sun img {
   max-width: 100%;
@@ -98,10 +103,13 @@ html body .scroll-container .page.page-three .ground {
 html body .scroll-container .page.page-three .moon {
   position: absolute;
   right: 15%;
-  top: 20%;
+  top: -20%;
   width: 15%;
 }
 @media (max-width: 767px) {
+  html body .scroll-container .page.page-three .moon {
+    top: 20%;
+  }
 }
 html body .scroll-container .page.page-three .moon img {
   max-width: 100%;

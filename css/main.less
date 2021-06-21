@@ -47,8 +47,12 @@ html {
                     .sun {
                         position: absolute;
                         left    : 15%;
-                        top     : 20%;
+                        top     : -20%;
                         width   : 15%;
+
+                        @media(max-width: 767px) {
+                            top: 20%;
+                        }
 
                         img {
                             max-width: 100%;
@@ -104,11 +108,11 @@ html {
                     .moon {
                         position: absolute;
                         right   : 15%;
-                        top     : 20%;
+                        top     : -20%;
                         width   : 15%;
 
                         @media(max-width: 767px) {
-                            //top     : initial;
+                            top     : 20%;
                             //right : initial;
                             //left  : 10%;
 

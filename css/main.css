@@ -131,9 +131,8 @@ html body .scroll-container .page .tree img {
 }
 html body #char {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 45%;
+  left: 40%;
   height: 185px;
   width: 250px;
   pointer-events: none;
@@ -143,10 +142,10 @@ html body #char {
   background-position: -750px -925px;
 }
 html body #char.left {
-  transform: translate(-50%, -50%) rotateY(180deg);
-  -moz-transform: translate(-50%, -50%) rotateY(180deg);
-  -webkit-transform: translate(-50%, -50%) rotateY(180deg);
-  -o-transform: translate(-50%, -50%) rotateY(180deg);
+  transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
 }
 html body #char.idle {
   background-size: 1750px;

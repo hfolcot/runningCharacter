@@ -154,6 +154,7 @@ html body .characterContainer #char {
   background-image: url('../img/char.png');
   background-size: 1750px;
   background-position: -750px -925px;
+  image-rendering: pixelated;
 }
 html body .characterContainer #char.left {
   transform: rotateY(180deg);

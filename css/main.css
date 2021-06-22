@@ -147,6 +147,11 @@ html body .characterContainer {
   left: 40%;
   pointer-events: none;
 }
+@media (max-width: 767px) {
+  html body .characterContainer {
+    left: 10%;
+  }
+}
 html body .characterContainer #char {
   height: 185px;
   width: 250px;
@@ -182,7 +187,7 @@ html body .characterContainer #char.run {
 html body .msh-container {
   position: absolute;
   bottom: 15%;
-  left: 5%;
+  right: 15%;
   font-size: 3rem;
   opacity: 1;
   transition: opacity 300ms ease;
@@ -240,33 +245,33 @@ html body .msh-container .mobile-scroll-hint {
 }
 @keyframes scrollhint {
   80% {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }
 @-moz-keyframes scrollhint {
   80% {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }
 @-webkit-keyframes scrollhint {
   80% {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }
 @-o-keyframes scrollhint {
   80% {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }

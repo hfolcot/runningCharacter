@@ -163,6 +163,10 @@ html {
             left          : 40%;
             pointer-events: none;
 
+            @media(max-width: 767px) {
+                left: 10%;
+            }
+
             #char {
                 height             : 185px;
                 width              : 250px;
@@ -204,7 +208,7 @@ html {
         .msh-container {
             position  : absolute;
             bottom    : 15%;
-            left      : 5%;
+            right     : 15%;
             font-size : 3rem;
             opacity   : 1;
             transition: opacity 300ms ease;
@@ -277,43 +281,43 @@ html {
 @keyframes scrollhint {
 
     80% {
-        transform: translateY(-100%);
+        transform: translateX(-100%);
     }
 
     100% {
-        transform: translateY(0%);
+        transform: translateX(0%);
     }
 }
 
 @-moz-keyframes scrollhint {
 
     80% {
-        transform: translateY(-100%);
+        transform: translateX(-100%);
     }
 
     100% {
-        transform: translateY(0%);
+        transform: translateX(0%);
     }
 }
 
 @-webkit-keyframes scrollhint {
 
     80% {
-        transform: translateY(-100%);
+        transform: translateX(-100%);
     }
 
     100% {
-        transform: translateY(0%);
+        transform: translateX(0%);
     }
 }
 
 @-o-keyframes scrollhint {
 
     80% {
-        transform: translateY(-100%);
+        transform: translateX(-100%);
     }
 
     100% {
-        transform: translateY(0%);
+        transform: translateX(0%);
     }
 }
